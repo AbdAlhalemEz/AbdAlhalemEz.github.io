@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { personalInfo, stats } from "@/data/portfolio";
-import { FiDownload, FiMail, FiChevronDown, FiGithub, FiLinkedin, FiTerminal } from "react-icons/fi";
+import { FiDownload, FiChevronDown, FiTerminal } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 function TypeWriter({ texts, speed = 80 }: { texts: string[]; speed?: number }) {

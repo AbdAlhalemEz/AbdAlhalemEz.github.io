@@ -3,7 +3,7 @@
 import { aboutText, education, certifications, volunteerWork } from "@/data/portfolio";
 import SectionHeading from "@/components/SectionHeading";
 import SectionWrapper from "@/components/SectionWrapper";
-import { FiMapPin, FiAward, FiHeart, FiBookOpen, FiCommand } from "react-icons/fi";
+import { FiAward, FiHeart, FiBookOpen } from "react-icons/fi";
 
 export default function About() {
   return (

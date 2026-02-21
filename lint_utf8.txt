@@ -1,0 +1,114 @@
+﻿
+> portifolio@0.1.0 lint
+> eslint
+
+
+C:\Users\black\Desktop\portifolio\next.config.ts
+  3:7  warning  'isProd' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\black\Desktop\portifolio\src\components\Footer.tsx
+  11:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\black\Desktop\portifolio\src\components\Footer.tsx:11:5
+   9 |
+  10 |   useEffect(() => {
+> 11 |     setMounted(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  12 |   }, []);
+  13 |
+  14 |   const scrollToTop = () => {  react-hooks/set-state-in-effect
+
+C:\Users\black\Desktop\portifolio\src\components\Navbar.tsx
+  17:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\black\Desktop\portifolio\src\components\Navbar.tsx:17:5
+  15 |
+  16 |   useEffect(() => {
+> 17 |     setMounted(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  18 |   }, []);
+  19 |
+  20 |   useEffect(() => {  react-hooks/set-state-in-effect
+
+C:\Users\black\Desktop\portifolio\src\components\ParticleBackground.tsx
+  36:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\black\Desktop\portifolio\src\components\ParticleBackground.tsx:36:9
+  34 |
+  35 |     useEffect(() => {
+> 36 |         setMounted(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  37 |     }, []);
+  38 |
+  39 |     const currentTheme = resolvedTheme || theme;  react-hooks/set-state-in-effect
+
+C:\Users\black\Desktop\portifolio\src\components\ThemeToggle.tsx
+  4:21  warning  'Monitor' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\black\Desktop\portifolio\src\components\sections\About.tsx
+  6:10  warning  'FiMapPin' is defined but never used   @typescript-eslint/no-unused-vars
+  6:50  warning  'FiCommand' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\black\Desktop\portifolio\src\components\sections\Contact.tsx
+   7:50  warning  'FiTerminal' is defined but never used  @typescript-eslint/no-unused-vars
+  41:16  warning  'err' is defined but never used         @typescript-eslint/no-unused-vars
+
+C:\Users\black\Desktop\portifolio\src\components\sections\Experience.tsx
+  14:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\black\Desktop\portifolio\src\components\sections\Experience.tsx:14:5
+  12 |   useEffect(() => {
+  13 |     // Generate a stable-looking SHA client-side to avoid hydration mismatch
+> 14 |     setSha(Math.random().toString(16).substring(2, 8));
+     |     ^^^^^^ Avoid calling setState() directly within an effect
+  15 |   }, []);
+  16 |
+  17 |   return <span>{sha}</span>;  react-hooks/set-state-in-effect
+
+C:\Users\black\Desktop\portifolio\src\components\sections\Hero.tsx
+   5:22  warning  'FiMail' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+   5:45  warning  'FiGithub' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+   5:55  warning  'FiLinkedin' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+  31:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\black\Desktop\portifolio\src\components\sections\Hero.tsx:31:7
+  29 |       }, speed / 2);
+  30 |     } else if (isDeleting && charIndex === 0) {
+> 31 |       setIsDeleting(false);
+     |       ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  32 |       setTextIndex((prev) => (prev + 1) % texts.length);
+  33 |     }
+  34 |  react-hooks/set-state-in-effect
+
+Γ£û 14 problems (5 errors, 9 warnings)
+
