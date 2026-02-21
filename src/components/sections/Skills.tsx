@@ -31,9 +31,15 @@ function SkillBar({ name, level }: { name: string; level: number }) {
     const updateSlots = () => {
       setSlots(window.innerWidth < 400 ? 12 : 20);
     };
-    updateSlots();
+
+    // Defer the initial calculation to move it out of the render cycle
+    const timeout = setTimeout(updateSlots, 0);
+
     window.addEventListener("resize", updateSlots);
-    return () => window.removeEventListener("resize", updateSlots);
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("resize", updateSlots);
+    };
   }, []);
 
   const totalSlots = slots;

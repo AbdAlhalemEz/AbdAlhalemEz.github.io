@@ -16,14 +16,14 @@ function Badge({ label }: { label: string }) {
 }
 
 function TypeIcon({ type }: { type: Project["type"] }) {
-  const icons: Record<string, any> = {
+  const icons: Record<string, React.ReactNode> = {
     "IT Tool": <FiCpu className="text-emerald-400" />,
     "Web App": <FiMonitor className="text-blue-400" />,
     Game: <FiPlay className="text-purple-400" />,
     "Educational Game": <FiPlay className="text-pink-400" />,
     "Mobile App": <FiSmartphone className="text-orange-400" />,
   };
-  return icons[type] || <FiFileText />;
+  return (icons[type as string] || <FiFileText />) as React.ReactNode;
 }
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {

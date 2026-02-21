@@ -4,16 +4,7 @@ import { useState, FormEvent } from "react";
 import { personalInfo, contactConfig } from "@/data/portfolio";
 import SectionHeading from "@/components/SectionHeading";
 import SectionWrapper from "@/components/SectionWrapper";
-import {
-  FiMail,
-  FiLinkedin,
-  FiGithub,
-  FiSend,
-  FiCheckCircle,
-  FiPhone,
-  FiMapPin,
-  FiCode,
-} from "react-icons/fi";
+import { FiMail, FiMapPin, FiLinkedin, FiGithub, FiTerminal, FiSend, FiCheckCircle, FiPhone, FiCode } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 export default function Contact() {

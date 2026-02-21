@@ -15,6 +15,9 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 40);
 
