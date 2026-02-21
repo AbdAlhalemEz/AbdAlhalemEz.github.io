@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+/* ─── CSS Custom Properties ──────────────────────────────── */
+:root {
+  /* Light Mode (Programmer Blue/White) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: rgba(241, 245, 249, 0.8);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-game: #7c3aed;
+  --accent-game-hover: #6d28d9;
+  --gradient-start: #2563eb;
+  --gradient-mid: #6366f1;
+  --gradient-end: #7c3aed;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --code-bg: #f1f5f9;
+}
+
+[data-theme='dark'] {
+  /* Dark Mode (Coded Theme) */
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --bg-card: rgba(30, 41, 59, 0.7);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+  --accent-game: #a78bfa;
+  --accent-game-hover: #c4b5fd;
+  --gradient-start: #38bdf8;
+  --gradient-mid: #818cf8;
+  --gradient-end: #a78bfa;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --code-bg: #1e293b;
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-game: var(--accent-game);
+  --color-card: var(--bg-card);
+  --color-secondary: var(--bg-secondary);
+  --color-muted: var(--text-secondary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ─── Base ───────────────────────────────────────────────── */
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 80px;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Inter", var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-mono {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+/* ─── Programmer Decor ───────────────────────────────────── */
+.terminal-window {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.terminal-header {
+  background: var(--border-color);
+  padding: 8px 12px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red {
+  background: #ff5f56;
+}
+
+.dot-yellow {
+  background: #ffbd2e;
+}
+
+.dot-green {
+  background: #27c93f;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* ─── Utility Classes ────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+/* ─── Skill bar ─────────────────────────────────────────── */
+.skill-bar-fill {
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Background Grids ───────────────────────────────────── */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, var(--border-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
+}
+
+.bg-dot {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, var(--border-color) 1px, transparent 1px);
+}
